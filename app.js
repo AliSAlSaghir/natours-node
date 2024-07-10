@@ -13,6 +13,7 @@ const { default: helmet } = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const compression = require('compression');
 
 const app = express();
 
@@ -55,6 +56,8 @@ app.use(
     ],
   }),
 );
+
+app.use(compression());
 
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
