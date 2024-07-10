@@ -1,0 +1,13 @@
+{
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": ["https://js.stripe.com/"]
+    },
+    {
+      "name": "ExportContent",
+      "essential": true
+    }
+  ]
+}
